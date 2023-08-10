@@ -32,7 +32,7 @@ public class TicketController implements Router<Ticket>{
 
     @Override
     @PostMapping
-    public void save(Ticket entity) {
+    public void save(@RequestBody  Ticket entity) {
         this.service.createTicket(entity);
     }
 

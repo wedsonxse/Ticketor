@@ -3,6 +3,8 @@ package com.org.ticketor.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "artist")
+
 public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

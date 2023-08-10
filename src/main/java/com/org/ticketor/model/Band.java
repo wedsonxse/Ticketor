@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@Table(name = "band")
+
 public class Band {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,9 +15,8 @@ public class Band {
 
     private String name;
 
-    @OneToMany(mappedBy = "band",cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "band")
     private List<Artist> artists;
-
 
     @ManyToMany(mappedBy = "bands")
     private Set<Event> events;

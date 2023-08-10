@@ -6,6 +6,8 @@ import java.sql.Date;
 import java.util.Set;
 
 @Entity
+@Table(name = "event")
+
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +16,6 @@ public class Event {
     private String name;
     private int capacity;
     private String city;
-
     private Date start;
     private Date end;
 

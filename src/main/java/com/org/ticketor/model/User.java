@@ -4,8 +4,10 @@ import com.org.ticketor.dicts.AccessLevelEnum;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +17,10 @@ public class User {
     private String email;
     private String userName;
     private String password;
-    private AccessLevelEnum accessLevelEnum;
+    private AccessLevelEnum accessLevel;
     private String cpf;
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Ticket> tickets;
+    @OneToMany(mappedBy = "user")
+    private Set<Ticket> tickets;
 
     public Long getId() {
         return id;

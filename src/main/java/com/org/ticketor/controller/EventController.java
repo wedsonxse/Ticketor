@@ -34,7 +34,7 @@ public class EventController implements Router<Event>{
 
     @Override
     @PostMapping
-    public void save(Event entity) {
+    public void save(@RequestBody Event entity) {
         this.service.createEvent(entity);
     }
 

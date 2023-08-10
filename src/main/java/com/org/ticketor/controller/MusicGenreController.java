@@ -34,7 +34,7 @@ public class MusicGenreController implements Router<MusicGenre>{
 
     @Override
     @PostMapping
-    public void save(MusicGenre entity) {
+    public void save(@RequestBody MusicGenre entity) {
         this.service.createMusicGenre(entity);
     }
 

@@ -32,7 +32,7 @@ public class ArtistController implements Router<Artist> {
 
     @Override
     @PostMapping
-    public void save(Artist entity) {
+    public void save(@RequestBody Artist entity) {
         this.service.createArtist(entity);
     }
 

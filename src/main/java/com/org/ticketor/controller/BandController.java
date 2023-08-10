@@ -34,7 +34,7 @@ public class BandController implements  Router<Band>{
 
     @Override
     @PostMapping
-    public void save(Band entity) {
+    public void save(@RequestBody Band entity) {
         this.service.createBand(entity);
     }
 
