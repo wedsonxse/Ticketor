@@ -40,7 +40,7 @@ public class EventController implements Router<Event>{
 
     @Override
     @DeleteMapping("/{id}")
-    public void deleteById(Long id) {
+    public void deleteById(@PathVariable Long id) {
         this.service.deleteEventById(id);
     }
 }

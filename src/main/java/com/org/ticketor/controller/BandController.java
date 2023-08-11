@@ -40,7 +40,7 @@ public class BandController implements  Router<Band>{
 
     @Override
     @DeleteMapping("/{id}")
-    public void deleteById(Long id) {
+    public void deleteById(@PathVariable Long id) {
         this.service.deleteBandById(id);
     }
 }

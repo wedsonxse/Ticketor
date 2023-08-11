@@ -38,7 +38,7 @@ public class TicketController implements Router<Ticket>{
 
     @Override
     @DeleteMapping("/{id}")
-    public void deleteById(Long id) {
+    public void deleteById(@PathVariable Long id) {
         this.service.deleteTicketById(id);
     }
 }

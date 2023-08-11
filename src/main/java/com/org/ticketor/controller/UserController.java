@@ -40,7 +40,7 @@ public class UserController implements  Router<User>{
 
     @Override
     @DeleteMapping("/{id}")
-    public void deleteById(Long id) {
+    public void deleteById(@PathVariable Long id) {
         this.service.deleteUserById(id);
     }
 }

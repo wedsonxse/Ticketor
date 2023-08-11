@@ -20,7 +20,7 @@ public class User {
     private AccessLevelEnum accessLevel;
     private String cpf;
     @OneToMany(mappedBy = "user")
-    private Set<Ticket> tickets;
+    private List<Ticket> tickets;
 
     public Long getId() {
         return id;
@@ -54,5 +54,11 @@ public class User {
         this.email = email;
     }
 
-    // Getters e setters
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
+    }
 }

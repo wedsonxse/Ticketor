@@ -40,7 +40,7 @@ public class MusicGenreController implements Router<MusicGenre>{
 
     @Override
     @DeleteMapping("/{id}")
-    public void deleteById(Long id) {
+    public void deleteById(@PathVariable Long id) {
         this.service.deleteMusicGenreById(id);
     }
 }
